@@ -13,10 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Use Node.js 18
+      - name: Use Node.js 18.18.0 (pin to avoid --loader deprecation issues)
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          # Pin a specific 18.x version below 18.19.0 so Cypress' tsx loader
+          # doesn't hit the Node --loader deprecation/behavior change.
+          node-version: '18.18.0'
 
       - name: Install dependencies
         run: |
