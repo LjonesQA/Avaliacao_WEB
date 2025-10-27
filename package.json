@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:run:report": "npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=false,json=true",
+  "cy:run:report": "npx cypress run --browser chrome --headless --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=false,json=true",
   "merge:report": "npx mochawesome-merge cypress/reports/*.json -o cypress/reports/mochawesome.json",
     "generate:report": "npx marge cypress/reports/mochawesome.json -f mochawesome -o cypress/reports",
     "test:ci": "npm run cy:run:report && npm run merge:report && npm run generate:report"
