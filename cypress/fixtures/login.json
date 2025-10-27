@@ -1,0 +1,10 @@
+{
+  "validos":{
+  "emailTest": "testerQA123@gmail.com",
+  "senha": "654321"  
+},
+  "invalidos":{
+    "emailTest": "invalido@invalido",
+    "senha":"asdfgh"
+  }
+}
